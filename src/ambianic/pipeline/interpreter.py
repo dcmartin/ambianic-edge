@@ -8,6 +8,7 @@ import copy
 from ambianic.pipeline.ai.object_detect import ObjectDetector
 from ambianic.pipeline.ai.face_detect import FaceDetector
 from ambianic.pipeline.store import SaveDetectionSamples
+from ambianic.pipeline.send import SendDetectionSamples
 from ambianic.pipeline import PipeElement, HealthChecker
 from ambianic.pipeline import timeline
 from ambianic import config_mgm, config_manager
@@ -282,6 +283,7 @@ class Pipeline(ManagedService):
         'source': AVSourceElement,
         'detect_objects': ObjectDetector,
         'save_detections': SaveDetectionSamples,
+        'send_detections': SendDetectionSamples,
         'detect_faces': FaceDetector,
     }
 
